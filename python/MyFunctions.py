@@ -52,7 +52,7 @@ def py_node(module, arguments):
 	
 
 
-#print(py_node("dist/index.js", '{"id":1,"descricao":"PESSOAL BR"}'))
+#print(py_node("httpClient", '{ "method": "get", "url": "https://brasilapi.com.br/api/cep/v2/14770000" }'))
 #raise Exception("Teste erro")
 
 
