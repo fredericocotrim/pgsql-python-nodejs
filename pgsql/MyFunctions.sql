@@ -21,7 +21,7 @@ $$
 language plpython3u;
 
 /*
-
+ 
 select
   fnc_python_nodejs(
     'httpClient',
