@@ -9,9 +9,9 @@ Environment Variables:
 
 Files:
 
-- python\MyFunctions.py - must be inside the indicated directory in the environment variable PYTHONPATH
-- nodejs - must be inside the indicated directory in the environment variable PYTHONPATH
-- pgsql\MyFunctions.sql - must be executed in PostgreSQL
+- python\MyFunctions.py - the file MyFunctions.py must be inside the indicated directory in the environment variable PYTHONPATH;
+- nodejs - the directory nodejs must be inside the indicated directory in the environment variable PYTHONPATH; in the shell inside %PYTHONPATH%\nodejs execute "yarn" (to download the node_modules) and "yarn build" to compile the files
+- pgsql\MyFunctions.sql - the file (content) MyFunctions.sql must be executed in PostgreSQL;
 
 References:
 - https://pt.slideshare.net/spjuliano/plpython-programando-em-python-no-postgresql-92426076
