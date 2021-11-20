@@ -20,13 +20,15 @@ $$
 $$
 language plpython3u;
 
-go
+/*
 
 select
   fnc_python_nodejs(
     'httpClient',
     jsonb_build_object(
         'method', 'get',
-        'url', 'https://brasilapi.com.br/api/cep/v2/14781750'
+        'url', 'https://brasilapi.com.br/api/cep/v2/14770000'
       )::text
   );
+  
+*/
