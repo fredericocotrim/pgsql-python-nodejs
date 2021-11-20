@@ -1,6 +1,6 @@
 
---drop extension if exists plpython3u cascade;
---create extension plpython3u;
+drop extension if exists plpython3u cascade;
+create extension plpython3u;
 
 drop function if exists fnc_python_nodejs(module text, arguments text);
 
