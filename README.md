@@ -2,6 +2,11 @@
 
 PostgreSQL - Python - Node.js
 
+Verisons:
+- PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
+- Python 3.7.4 (EDB Language Pack v1.0-5)
+- Node.js 12.19.0
+
 Environment Variables:
 - PYTHONHOME=C:\Python\Python37
 - PYTHONPATH=C:\Python\Python37
