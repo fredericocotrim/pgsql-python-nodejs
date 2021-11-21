@@ -2,6 +2,8 @@
 
 PostgreSQL - Python - Node.js
 
+Is it the best way? I don't think so, but it works!
+
 Verisons:
 - PostgreSQL 13.4, compiled by Visual C++ build 1914, 64-bit
 - Python 3.7.4 (EDB Language Pack v1.0-5)
