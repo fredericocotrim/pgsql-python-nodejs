@@ -40,8 +40,8 @@ def py_node(module, arguments):
 #     print(response.stdout.decode())
 #     print(response.stdout.decode("utf-8"))
 #     print(response.stdout.decode(sys.stdout.encoding))
-    output = response.stdout.decode(sys.stdout.encoding)
-    decodedOutput = decode(output)
+    encodedOutput = response.stdout.decode(sys.stdout.encoding)
+    decodedOutput = decode(encodedOutput)
     return decodedOutput
   else:
 #     sys.stderr.write(response.stderr)
