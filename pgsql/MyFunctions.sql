@@ -4,8 +4,6 @@ create extension if not exists plpython3u;
 
 
 
-
-
 drop function if exists fnc_python_nodejs_base(module text, arguments text);
 
 create or replace function fnc_python_nodejs_base(module text, arguments text default null) returns text as
@@ -25,8 +23,6 @@ $$
 
 $$
 language plpython3u;
-
-
 
 
 
