@@ -1,7 +1,7 @@
 import os
 import sys
 import base64
-from Naked.toolshed.shell import execute_js, muterun_js
+import subprocess
 
 def encode(decodedStr):
   encodedBytes = base64.b64encode(decodedStr.encode("utf-8"))
@@ -33,20 +33,26 @@ def py_node(module, arguments):
   filename = "index.js"
 
   #response = muterun_js("E:/Python/Python37/nodejs/dist/" + filename, module + " " + encode(arguments))
-  response = muterun_js(os.path.join(filepath, "nodejs", "dist", filename), module + " " + encode(arguments))
+  response = subprocess.run(
+    ["node", os.path.join(filepath, "nodejs", "dist", filename), module, encode(arguments)], 
+    stdin=subprocess.DEVNULL,    
+    stdout=subprocess.PIPE, 
+    stderr=subprocess.PIPE,
+    text=True
+  )
 
-  if response.exitcode == 0:
+  if response.returncode == 0:
 #     print(response.stdout)
 #     print(response.stdout.decode())
 #     print(response.stdout.decode("utf-8"))
 #     print(response.stdout.decode(sys.stdout.encoding))
-    encodedOutput = response.stdout.decode(sys.stdout.encoding)
+    encodedOutput = response.stdout
     decodedOutput = decode(encodedOutput)
     return decodedOutput
   else:
 #     sys.stderr.write(response.stderr)
 #     sys.stderr.write(response.stderr.decode())
-    raise Exception(response.stderr.decode())
+    raise Exception(response.stderr)
 
 
 	
