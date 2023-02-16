@@ -1,5 +1,6 @@
 import './env';
 import { decode, encode } from './lib/utils';
+import path from 'path';
 
 let args = process.argv.slice(2);
 
@@ -26,7 +27,7 @@ const run = async (args) => {
     const decodedArg = encodedArg && decode(encodedArg);
     const arg = JSON.parse(decodedArg || '{}');
 
-    const { default: moduleHandler} = await import(`./services/${module}`);
+    const { default: moduleHandler} = await import(path.resolve(__dirname, 'services', module));
     const result = await moduleHandler(arg);
 
     output = {data: result};
