@@ -19,6 +19,8 @@ Files:
 - python\MyFunctions.py - the file (MyFunctions.py) must be placed inside the indicated directory in the environment variable PYTHONPATH;
 - pgsql\MyFunctions.sql - the contents of the file (MyFunctions.sql) must be executed in PostgreSQL;
 
+Example video: https://youtu.be/NpJphaVycuc
+
 References:
 - https://pt.slideshare.net/spjuliano/plpython-programando-em-python-no-postgresql-92426076
 - https://levelup.gitconnected.com/how-to-execute-shell-commands-properly-in-python-5b90c1a9213f
