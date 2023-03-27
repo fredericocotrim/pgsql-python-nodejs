@@ -9,6 +9,7 @@ const handle = async arg => {
     headers: arg.headers,
     auth: arg.auth,
     data: arg.data,
+    timeout: arg.timeout,
   });
 
   return response.data;
